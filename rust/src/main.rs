@@ -4,7 +4,9 @@ use count_chars::count_chars;
 use count_duplicates::count_duplicates;
 use digital_root::digital_root;
 use hello::hello;
+use itertools::Itertools;
 use phone_number::create_phone_number;
+use the_observed_pin::{get_pins, get_pins_old};
 use tralling_zeros::zeros;
 use unique_in_order::unique_in_order;
 use valid_isbn::valid_isbn10;
@@ -16,6 +18,7 @@ mod count_duplicates;
 mod digital_root;
 mod hello;
 mod phone_number;
+mod the_observed_pin;
 mod tralling_zeros;
 mod unique_in_order;
 mod valid_isbn;
@@ -44,4 +47,12 @@ fn main() {
     assert_eq!(zeros(6), 1);
     assert_eq!(zeros(14), 2);
     assert_eq!(valid_isbn10("1112223339"), true);
+    assert_eq!(
+        get_pins("8").iter().sorted().collect::<Vec<&String>>(),
+        vec!["0", "5", "7", "8", "9"]
+    );
+    assert_eq!(
+        get_pins_old("8").iter().sorted().collect::<Vec<&String>>(),
+        vec!["0", "5", "7", "8", "9"]
+    );
 }
