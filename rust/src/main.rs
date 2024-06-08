@@ -5,6 +5,7 @@ use count_duplicates::count_duplicates;
 use digital_root::digital_root;
 use hello::hello;
 use unique_in_order::unique_in_order;
+use your_order_please::order;
 
 mod alphabet_position;
 mod count_chars;
@@ -12,6 +13,7 @@ mod count_duplicates;
 mod digital_root;
 mod hello;
 mod unique_in_order;
+mod your_order_please;
 
 fn main() {
     let text = hello().clone();
@@ -28,4 +30,5 @@ fn main() {
         unique_in_order("AAAABBBCCDAABBB".chars()),
         vec!['A', 'B', 'C', 'D', 'A', 'B']
     );
+    assert_eq!(order("is2 Thi1s T4est 3a"), "Thi1s is2 3a T4est");
 }
