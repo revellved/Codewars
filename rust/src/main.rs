@@ -1,11 +1,12 @@
-use cakes::cakes;
 use itertools::Itertools;
 
 use codewars::{map_key_and_expr, map_key_val};
 
 use alphabet_position::alphabet_position;
+use cakes::cakes;
 use count_chars::count_chars;
 use count_duplicates::count_duplicates;
+use decode_morse::{decode_bits, decode_morse};
 use digital_root::digital_root;
 use hello::hello;
 use phone_number::create_phone_number;
@@ -19,6 +20,7 @@ mod alphabet_position;
 mod cakes;
 mod count_chars;
 mod count_duplicates;
+mod decode_morse;
 mod digital_root;
 mod hello;
 mod phone_number;
@@ -59,10 +61,20 @@ fn main() {
         get_pins_old("8").iter().sorted().collect::<Vec<&String>>(),
         vec!["0", "5", "7", "8", "9"]
     );
+
     {
         // Cakes
         let recipe = map_key_and_expr!(flour: 500, sugar: 200, eggs: 1);
         let available = map_key_and_expr!(flour: 1200, sugar: 1200, eggs: 5, milk: 200);
         assert_eq!(cakes(&recipe, &available), 2)
+    }
+
+    {
+        // Morse
+        assert_eq!(
+            decode_morse(".... . -.--   .--- ..- -.. ."),
+            "HEY JUDE".to_string()
+        );
+        assert_eq!(decode_bits("11001100"), "")
     }
 }
