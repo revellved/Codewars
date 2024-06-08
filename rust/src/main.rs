@@ -4,6 +4,7 @@ use count_chars::count_chars;
 use count_duplicates::count_duplicates;
 use digital_root::digital_root;
 use hello::hello;
+use phone_number::create_phone_number;
 use unique_in_order::unique_in_order;
 use your_order_please::order;
 
@@ -12,6 +13,7 @@ mod count_chars;
 mod count_duplicates;
 mod digital_root;
 mod hello;
+mod phone_number;
 mod unique_in_order;
 mod your_order_please;
 
@@ -31,4 +33,8 @@ fn main() {
         vec!['A', 'B', 'C', 'D', 'A', 'B']
     );
     assert_eq!(order("is2 Thi1s T4est 3a"), "Thi1s is2 3a T4est");
+    assert_eq!(
+        create_phone_number(&[1, 2, 3, 4, 5, 6, 7, 8, 9, 0]),
+        "(123) 456-7890"
+    );
 }
