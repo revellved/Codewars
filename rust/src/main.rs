@@ -5,6 +5,7 @@ use count_duplicates::count_duplicates;
 use digital_root::digital_root;
 use hello::hello;
 use phone_number::create_phone_number;
+use tralling_zeros::zeros;
 use unique_in_order::unique_in_order;
 use your_order_please::order;
 
@@ -14,6 +15,7 @@ mod count_duplicates;
 mod digital_root;
 mod hello;
 mod phone_number;
+mod tralling_zeros;
 mod unique_in_order;
 mod your_order_please;
 
@@ -37,4 +39,6 @@ fn main() {
         create_phone_number(&[1, 2, 3, 4, 5, 6, 7, 8, 9, 0]),
         "(123) 456-7890"
     );
+    assert_eq!(zeros(6), 1);
+    assert_eq!(zeros(14), 2);
 }
