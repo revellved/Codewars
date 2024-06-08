@@ -7,6 +7,7 @@ use hello::hello;
 use phone_number::create_phone_number;
 use tralling_zeros::zeros;
 use unique_in_order::unique_in_order;
+use valid_isbn::valid_isbn10;
 use your_order_please::order;
 
 mod alphabet_position;
@@ -17,6 +18,7 @@ mod hello;
 mod phone_number;
 mod tralling_zeros;
 mod unique_in_order;
+mod valid_isbn;
 mod your_order_please;
 
 fn main() {
@@ -41,4 +43,5 @@ fn main() {
     );
     assert_eq!(zeros(6), 1);
     assert_eq!(zeros(14), 2);
+    assert_eq!(valid_isbn10("1112223339"), true);
 }
