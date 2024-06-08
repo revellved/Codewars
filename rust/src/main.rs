@@ -1,10 +1,13 @@
+use cakes::cakes;
+use itertools::Itertools;
+
+use codewars::{map_key_and_expr, map_key_val};
+
 use alphabet_position::alphabet_position;
-use codewars::map_key_val;
 use count_chars::count_chars;
 use count_duplicates::count_duplicates;
 use digital_root::digital_root;
 use hello::hello;
-use itertools::Itertools;
 use phone_number::create_phone_number;
 use the_observed_pin::{get_pins, get_pins_old};
 use tralling_zeros::zeros;
@@ -13,6 +16,7 @@ use valid_isbn::valid_isbn10;
 use your_order_please::order;
 
 mod alphabet_position;
+mod cakes;
 mod count_chars;
 mod count_duplicates;
 mod digital_root;
@@ -55,4 +59,10 @@ fn main() {
         get_pins_old("8").iter().sorted().collect::<Vec<&String>>(),
         vec!["0", "5", "7", "8", "9"]
     );
+    {
+        // Cakes
+        let recipe = map_key_and_expr!(flour: 500, sugar: 200, eggs: 1);
+        let available = map_key_and_expr!(flour: 1200, sugar: 1200, eggs: 5, milk: 200);
+        assert_eq!(cakes(&recipe, &available), 2)
+    }
 }
