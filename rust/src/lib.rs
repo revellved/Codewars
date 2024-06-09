@@ -1,6 +1,25 @@
-pub mod num_get_index;
-
 pub use std::collections::HashMap;
+
+pub struct ScopeCall<F: FnMut()> {
+    c: F,
+}
+
+impl<F: FnMut()> Drop for ScopeCall<F> {
+    fn drop(&mut self) {
+        (self.c)();
+    }
+}
+
+#[macro_export]
+macro_rules! defer {
+    ($e:expr) => {
+        let _scope_call = $crate::ScopeCall {
+            c: || -> () {
+                $e;
+            },
+        };
+    };
+}
 
 #[macro_export]
 macro_rules! map_key_val {
@@ -31,24 +50,3 @@ macro_rules! map_ss {
         map
     }};
 }
-
-// pub struct ScopeCall<F: FnMut()> {
-//     c: F,
-// }
-//
-// impl<F: FnMut()> Drop for ScopeCall<F> {
-//     fn drop(&mut self) {
-//         (self.c)();
-//     }
-// }
-//
-// #[macro_export]
-// macro_rules! defer {
-//     ($e:expr) => {
-//         let _scope_call = $crate::ScopeCall {
-//             c: || -> () {
-//                 $e;
-//             },
-//         };
-//     };
-// }
