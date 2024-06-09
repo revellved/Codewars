@@ -33,6 +33,8 @@ mod unique_in_order;
 mod valid_isbn;
 mod your_order_please;
 
+pub mod brainfuck;
+
 fn main() {
     let text = hello().clone();
     println!("{text}");
