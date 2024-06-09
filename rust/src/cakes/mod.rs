@@ -13,7 +13,7 @@ pub fn cakes(recipe: &HashMap<&str, u32>, available: &HashMap<&str, u32>) -> u32
 
 #[cfg(test)]
 mod tests {
-    use super::cakes;
+    use super::*;
     use std::collections::HashMap;
 
     macro_rules! map {

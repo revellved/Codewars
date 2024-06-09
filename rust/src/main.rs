@@ -26,6 +26,7 @@ mod decode_morse;
 mod digital_root;
 mod hello;
 mod phone_number;
+mod range_extractions;
 mod the_observed_pin;
 mod tralling_zeros;
 mod unique_in_order;

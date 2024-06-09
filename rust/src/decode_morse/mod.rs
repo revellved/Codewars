@@ -1,13 +1,7 @@
 mod preloaded;
 
 use itertools::Itertools;
-// use encoding::all::ASCII;
-// use itertools::Itertools;
 pub use preloaded::MORSE_CODE;
-
-// use itertools::Itertools;
-// use crate::decode_morse;
-// MORSE_CODE is `HashMap<String, String>`. e.g. ".-" -> "A".
 
 fn decode_bit(encoded: &str) -> u8 {
     encoded.chars().rev().enumerate().fold(0, |num, (i, ch)| {
@@ -17,11 +11,6 @@ fn decode_bit(encoded: &str) -> u8 {
             num
         }
     }) as u8
-    // match encoded {
-    //     "11001100" => '.'.
-    //     ""
-    //     _ => ' '
-    // } as u8
 }
 
 pub fn decode_bits(encoded: &str) -> String {

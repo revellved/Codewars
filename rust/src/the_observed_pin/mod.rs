@@ -61,7 +61,7 @@ pub fn get_pins(observed: &str) -> Vec<String> {
 
 #[cfg(test)]
 mod tests {
-    use super::get_pins;
+    use super::*;
     use itertools::Itertools;
 
     #[test]

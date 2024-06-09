@@ -20,7 +20,7 @@ pub fn valid_isbn10(isbn: &str) -> bool {
 
 #[cfg(test)]
 mod tests {
-    use super::valid_isbn10;
+    use super::*;
 
     fn dotest(isbn: &str, expected: bool) {
         let actual = valid_isbn10(isbn);
