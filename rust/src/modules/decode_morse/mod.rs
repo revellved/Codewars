@@ -1,6 +1,5 @@
 mod preloaded;
 
-use itertools::Itertools;
 pub use preloaded::MORSE_CODE;
 
 fn decode_bit(encoded: &str) -> u8 {
@@ -24,45 +23,6 @@ pub fn decode_bits(encoded: &str) -> String {
     }
 
     String::from_utf8(s).unwrap_or_default()
-}
-
-pub fn _decode_morse(encoded: &str) -> String {
-    encoded
-        .replace("  ", " @ ")
-        .split_whitespace()
-        .fold(String::new(), |a, s| match s {
-            "" => a,
-            "@" if a.chars().last().unwrap_or(' ').ne(&' ') => a + " ",
-            _ => a + (*MORSE_CODE).get(s).unwrap_or(&String::new()),
-        })
-}
-
-pub fn __decode_morse(encoded: &str) -> String {
-    encoded
-        .split("  ")
-        .filter_map(|word| match word {
-            "" => None,
-            _ => Some(word.split_whitespace().fold(String::new(), |a, s| {
-                a + (*MORSE_CODE).get(s).unwrap_or(&String::new())
-            })),
-        })
-        .join(" ")
-}
-
-pub fn ___decode_morse(encoded: &str) -> String {
-    encoded
-        .split("  ")
-        .fold(String::new(), |final_string, word| {
-            (match final_string.is_empty() {
-                true => final_string + " ",
-                false => final_string,
-            }) + word
-                .split_whitespace()
-                .fold(String::new(), |s, ch| {
-                    s + (*MORSE_CODE).get(ch).unwrap_or(&String::new())
-                })
-                .as_str()
-        })
 }
 
 pub fn decode_morse(encoded: &str) -> String {
