@@ -23,7 +23,7 @@ pub fn decode_bits(encoded: &str) -> String {
         i += 8;
     }
 
-    String::from_utf8(s).unwrap_or(String::new())
+    String::from_utf8(s).unwrap_or_default()
 }
 
 pub fn _decode_morse(encoded: &str) -> String {
@@ -53,15 +53,16 @@ pub fn ___decode_morse(encoded: &str) -> String {
     encoded
         .split("  ")
         .fold(String::new(), |final_string, word| {
-            (match final_string.len() {
-                0 => final_string,
-                _ => final_string + " ",
-            }) + word
-                .split_whitespace()
-                .fold(String::new(), |s, ch| {
-                    s + (*MORSE_CODE).get(ch).unwrap_or(&String::new())
-                })
-                .as_str()
+            final_string
+                .is_empty()
+                .then_some(final_string.clone() + " ")
+                .unwrap_or(final_string)
+                + word
+                    .split_whitespace()
+                    .fold(String::new(), |s, ch| {
+                        s + (*MORSE_CODE).get(ch).unwrap_or(&String::new())
+                    })
+                    .as_str()
         })
 }
 

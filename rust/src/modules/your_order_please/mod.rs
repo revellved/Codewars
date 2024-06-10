@@ -15,7 +15,7 @@ fn _order(text: &str) -> String {
 
     words.for_each(|word| {
         let mut key = word.chars().fold(0, |i: i32, char_of_word| {
-            if char_of_word >= '1' && char_of_word <= '9' {
+            if ('0'..='9').contains(&char_of_word) {
                 i + char_of_word as i32 - 48
             } else {
                 i
@@ -36,7 +36,7 @@ fn _order(text: &str) -> String {
 
     while i <= count_words {
         let mut v = *order_map.entry(i).or_default();
-        if v == "" {
+        if v.is_empty() {
             v = *order_map.entry(j).or_default();
             j -= 1;
         }

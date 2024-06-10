@@ -21,20 +21,17 @@ fn nums_neighbors(ch: char) -> Vec<String> {
 }
 
 pub fn get_pins_old(observed: &str) -> Vec<String> {
-    observed
-        .chars()
-        .into_iter()
-        .fold(vec![String::new()], |pins, num| {
-            pins.into_iter()
-                .map(|pin| {
-                    nums_neighbors(num)
-                        .iter()
-                        .map(|n| pin.clone() + n)
-                        .collect_vec()
-                })
-                .collect_vec()
-                .concat()
-        })
+    observed.chars().fold(vec![String::new()], |pins, num| {
+        pins.into_iter()
+            .map(|pin| {
+                nums_neighbors(num)
+                    .iter()
+                    .map(|n| pin.clone() + n)
+                    .collect_vec()
+            })
+            .collect_vec()
+            .concat()
+    })
 }
 
 pub fn get_pins(observed: &str) -> Vec<String> {

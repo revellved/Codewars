@@ -6,7 +6,7 @@ fn _1_digital_root(n: i64) -> i64 {
         sum_nums += i as i64 - 48;
     }
 
-    return sum_nums;
+    sum_nums
 }
 
 fn _sum_ordire_enumarate(n: i64) -> i64 {

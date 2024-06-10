@@ -5,7 +5,7 @@ mod solution {
         let mut last = 0;
         let mut range: Option<cmp::Ordering> = None;
         a.iter().fold(String::new(), |s, n| {
-            if s.len() == 0 {
+            if s.is_empty() {
                 last = *n;
                 return n.to_string();
             }
