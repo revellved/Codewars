@@ -1,29 +1,8 @@
 // use str;
 
 pub fn create_phone_number(numbers: &[u8]) -> String {
-    let s: String = numbers.into_iter().map(|i| i.to_string()).collect();
-    // let s = std::str::from_utf8(numbers).unwrap();
-    // let s = std::str::from_utf8(numbers).unwrap();
-    // std::str::from_utf8(numbers);
-
+    let s: String = numbers.iter().map(|i| i.to_string()).collect();
     format!("({}) {}-{}", &s[..3], &s[3..6], &s[6..])
-}
-
-fn _create_phone_number(phone_vec: &Vec<i64>) -> String {
-    let mut res_str: String = String::from("(");
-    for dig in &phone_vec[0..3] {
-        res_str += dig.to_string().as_str();
-    }
-    res_str += ") ";
-    for dig in &phone_vec[3..6] {
-        res_str += dig.to_string().as_str();
-    }
-    res_str += "-";
-    for dig in &phone_vec[6..10] {
-        res_str += dig.to_string().as_str();
-    }
-
-    res_str
 }
 
 pub fn __create_phone_number(numbers: &[u8]) -> String {

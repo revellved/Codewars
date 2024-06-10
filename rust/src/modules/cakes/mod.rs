@@ -1,12 +1,12 @@
 use std::collections::HashMap;
 
 pub fn cakes(recipe: &HashMap<&str, u32>, available: &HashMap<&str, u32>) -> u32 {
-    recipe.into_iter().fold(u32::MAX, |count, product| {
+    recipe.iter().fold(u32::MAX, |count, product| {
         let available_product = available.get(product.0);
-        if available_product.is_none() {
-            0
+        if let Some(ap) = available_product {
+            std::cmp::min(count, ap / product.1)
         } else {
-            std::cmp::min(count, available_product.unwrap() / product.1)
+            0
         }
     })
 }

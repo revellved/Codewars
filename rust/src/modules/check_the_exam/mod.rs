@@ -1,11 +1,6 @@
-// **PROLOG REFERENCE**
-// maplist([X,Y,R]>>(Y='' -> R is 0; X=Y -> R is 4; R is -1), Array1, Array2, Scores),
-// sumlist(Scores, Sum),
-// Score is max(0, Sum).
-
 pub fn check_exam(arr_a: &[&str], arr_b: &[&str]) -> i64 {
     arr_b
-        .into_iter()
+        .iter()
         .enumerate()
         .fold(0, |acc, (i, v)| match *v {
             "" => acc,
