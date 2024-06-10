@@ -15,7 +15,7 @@ fn _order(text: &str) -> String {
 
     words.for_each(|word| {
         let mut key = word.chars().fold(0, |i: i32, char_of_word| {
-            if ('0'..='9').contains(&char_of_word) {
+            if char_of_word.is_ascii_digit() {
                 i + char_of_word as i32 - 48
             } else {
                 i

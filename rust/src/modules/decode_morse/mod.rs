@@ -53,16 +53,15 @@ pub fn ___decode_morse(encoded: &str) -> String {
     encoded
         .split("  ")
         .fold(String::new(), |final_string, word| {
-            final_string
-                .is_empty()
-                .then_some(final_string.clone() + " ")
-                .unwrap_or(final_string)
-                + word
-                    .split_whitespace()
-                    .fold(String::new(), |s, ch| {
-                        s + (*MORSE_CODE).get(ch).unwrap_or(&String::new())
-                    })
-                    .as_str()
+            (match final_string.is_empty() {
+                true => final_string + " ",
+                false => final_string,
+            }) + word
+                .split_whitespace()
+                .fold(String::new(), |s, ch| {
+                    s + (*MORSE_CODE).get(ch).unwrap_or(&String::new())
+                })
+                .as_str()
         })
 }
 

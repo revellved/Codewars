@@ -4,7 +4,7 @@ pub fn valid_isbn10(isbn: &str) -> bool {
             .chars()
             .enumerate()
             .try_fold(0, |sum, (i, ch)| {
-                let num = if ('0'..='9').contains(&ch) {
+                let num = if ch.is_ascii_digit() {
                     ch as usize - 48
                 } else if i == 9 && ch == 'X' {
                     10
