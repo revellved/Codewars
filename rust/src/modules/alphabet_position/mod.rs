@@ -18,7 +18,7 @@ fn _alphabet_position(text: &str) -> String {
 pub fn alphabet_position(text: &str) -> String {
     text.to_lowercase()
         .chars()
-        .filter(|c| c >= &'a' && c <= &'z')
+        .filter(|c| (&'a'..=&'z').contains(&c))
         .map(|c| (c as u32 - 96).to_string())
         .collect::<Vec<String>>()
         .join(" ")
