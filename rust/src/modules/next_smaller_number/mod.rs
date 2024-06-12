@@ -1,27 +1,34 @@
-use itertools::Itertools;
-// use num_traits::PrimInt;
-
 pub fn next_smaller_number(n: u64) -> Option<u64> {
-    // println!("n: {n}, n if i=2: {:?}", num_get_index(n, 1));
-    // let mut div: u64 = 10;
-    // while n > div {
-    //     let target_num = n % div - (n % (div / 10));
-    //
-    //     div *= 10
-    // }
-
-    let nn: u64 = n
+    let mut digits: Vec<u64> = n
         .to_string()
-        .replace("0", "@")
         .chars()
-        .sorted()
-        .join("")
-        .replace("@", "0")
-        .parse()
-        .unwrap();
-    match nn == n {
-        true => None,
-        false => Some(nn),
+        .map(|c| c.to_digit(10).unwrap() as u64)
+        .collect();
+
+    let mut i = digits.len() as i32 - 1;
+    while i > 0 && digits[i as usize] >= digits[(i - 1) as usize] {
+        i -= 1;
+    }
+
+    if i == 0 {
+        return None;
+    }
+
+    let mut j = digits.len() as i32 - 1;
+    while j > 0 && digits[j as usize] >= digits[(i - 1) as usize] {
+        j -= 1;
+    }
+
+    digits.swap((i - 1) as usize, j as usize);
+
+    digits[(i as usize)..].reverse();
+
+    let result: u64 = digits.iter().fold(0, |acc, &x| acc * 10 + x);
+
+    if result.to_string().len() == digits.len() {
+        Some(result)
+    } else {
+        None
     }
 }
 
