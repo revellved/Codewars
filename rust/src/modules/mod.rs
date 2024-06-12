@@ -7,6 +7,7 @@ pub mod count_duplicates;
 pub mod decode_morse;
 pub mod digital_root;
 pub mod num_get_index;
+pub mod persistent_bigger;
 pub mod phone_number;
 pub mod range_extractions;
 pub mod sum_of_pairs;
