@@ -7,8 +7,8 @@
 //
 // What if the string is empty? Then the result should be empty object literal, {}.
 //
-// use std::collections::HashMap;
-//
+
+use std::collections::HashMap;
 
 pub fn count_chars(input: &str) -> HashMap<char, i32> {
     let mut used_chars: HashMap<char, i32> = HashMap::new();
