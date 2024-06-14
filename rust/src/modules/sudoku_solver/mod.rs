@@ -1,42 +1,28 @@
 // Solve the given puzzle in place, no need to return a copy
-pub fn sudoku(puzzle: &mut [[u8; 9]; 9]) -> bool {
-    for row in 0..9 {
-        for col in 0..9 {
-            if puzzle[row][col] == 0 {
-                for num in 1..=9 {
-                    if is_safe(puzzle, row, col, num) {
-                        puzzle[row][col] = num;
-                        if sudoku(puzzle) {
-                            return true;
-                        }
-                        puzzle[row][col] = 0;
-                    }
+use std::{collections::HashSet, iter::FromIterator};
+
+pub fn sudoku(puzzle: &mut [[u8; 9]; 9]) {
+    let s: HashSet<u8> = HashSet::from_iter(1..=9);
+    for r in 0..9 {
+        for c in 0..9 {
+            if puzzle[r][c] == 0 {
+                let br = r / 3 * 3;
+                let bc = c / 3 * 3;
+                let block: HashSet<u8> = HashSet::from_iter(
+                    (0..3_usize)
+                        .flat_map(|row| (0..3_usize).map(move |col| (row, col)))
+                        .map(|(r, c)| puzzle[br + r][bc + c]),
+                );
+                let row = HashSet::from(puzzle[r]);
+                let col = HashSet::from_iter(puzzle.iter().map(|row| row[c]));
+                let x = &s - &(&(&row | &col) | &block);
+                if x.len() == 1 {
+                    puzzle[r][c] = *x.iter().next().unwrap() as u8;
+                    sudoku(puzzle)
                 }
-                return false;
             }
         }
     }
-    true
-}
-
-fn is_safe(grid: &[[u8; 9]; 9], row: usize, col: usize, num: u8) -> bool {
-    for i in 0..9 {
-        if grid[row][i] == num || grid[i][col] == num {
-            return false;
-        }
-    }
-
-    let start_row = (row / 3) * 3;
-    let start_col = (col / 3) * 3;
-    for i in 0..3 {
-        for j in 0..3 {
-            if grid[start_row + i][start_col + j] == num {
-                return false;
-            }
-        }
-    }
-
-    true
 }
 
 #[cfg(test)]
