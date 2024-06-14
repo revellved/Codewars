@@ -12,6 +12,7 @@ pub mod num_get_index;
 pub mod persistent_bigger;
 pub mod phone_number;
 pub mod range_extractions;
+pub mod sudoku_solver;
 pub mod sum_of_pairs;
 pub mod the_observed_pin;
 pub mod tic_tac_toe_checker;
