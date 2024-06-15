@@ -1,26 +1,19 @@
 package kata
 
 func FindOutlier(integers []int) int {
-	odd := 0
-	even := 0
-
-	last_odd := 0
-	last_even := 0
-
-	for _, i := range integers {
-		if i%2 == 0 {
-			odd += 1
-			last_odd = i
-		} else {
-			even += 1
-			last_even = i
+	var odd, even *int
+	for i, integer := range integers {
+		if even != nil && odd != nil {
+			if integer%2 == 0 {
+				return *odd
+			}
+			return *even
 		}
-
-		if odd >= 2 && even >= 1 {
-			return last_even
-		} else if even >= 2 && odd >= 1 {
-			return last_odd
+		if integer%2 == 0 {
+			even = &integers[i]
+		} else {
+			odd = &integers[i]
 		}
 	}
-	return 0
+	return integers[len(integers)-1]
 }
