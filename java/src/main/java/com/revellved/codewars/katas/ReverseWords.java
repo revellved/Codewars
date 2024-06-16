@@ -5,9 +5,9 @@ package com.revellved.codewars;
  *
  */
 
-public class Kata
+public class ReverseWords
 {
-  public static String reverseWords(final String original)
+  public static String exec(final String original)
   {
     String reverseStr = "";
     for (String part : original.split(" ")) {
