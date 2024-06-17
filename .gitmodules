@@ -1,0 +1,4 @@
+[submodule "cpp/libs/igloo/external/snowhouse"]
+	path = cpp/libs/igloo/external/snowhouse
+	url = https://github.com/banditcpp/snowhouse
+	branch = headers-only
