@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -Werror -rdynamic CMakeFiles/main.dir/src/main.cpp.o -o bin/main  -Wl,-Bstatic -lpthread -Wl,-Bdynamic -lpcre
