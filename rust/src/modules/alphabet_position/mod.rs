@@ -1,5 +1,3 @@
-use std::char;
-
 pub fn alphabet_position(text: &str) -> String {
     text.to_lowercase()
         .chars()
