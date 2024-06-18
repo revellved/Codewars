@@ -11,4 +11,5 @@ end
 group :development, :test do
   gem 'codewars_test', git: 'https://github.com/codewars/ruby-test-framework.git'
   gem 'rspec-core'
+  gem 'rspec-expectations'
 end
