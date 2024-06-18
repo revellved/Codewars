@@ -1,15 +1,5 @@
 pub use std::collections::HashMap;
 
-pub struct ScopeCall<F: FnMut()> {
-    c: F,
-}
-
-impl<F: FnMut()> Drop for ScopeCall<F> {
-    fn drop(&mut self) {
-        (self.c)();
-    }
-}
-
 #[macro_export]
 macro_rules! defer {
     ($e:expr) => {
