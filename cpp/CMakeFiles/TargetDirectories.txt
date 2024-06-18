@@ -1,3 +1,0 @@
-/home/ruslan/projects/Codewars/cpp/CMakeFiles/main.dir
-/home/ruslan/projects/Codewars/cpp/CMakeFiles/edit_cache.dir
-/home/ruslan/projects/Codewars/cpp/CMakeFiles/rebuild_cache.dir
