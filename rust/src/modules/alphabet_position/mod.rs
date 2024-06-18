@@ -1,20 +1,5 @@
 use std::char;
 
-fn _alphabet_position(text: &str) -> String {
-    let mut res = String::from("");
-    text.to_lowercase().chars().for_each(|c: char| {
-        let v = c as i64 - 96;
-        if v > 0 && v < 27 {
-            if !res.is_empty() {
-                res += " "
-            }
-            res += &(v).to_string();
-        }
-    });
-
-    res
-}
-
 pub fn alphabet_position(text: &str) -> String {
     text.to_lowercase()
         .chars()
