@@ -1,0 +1,14 @@
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
+
+gem 'sorbet-runtime'
+
+group :development do
+  gem 'sorbet'
+end
+
+group :development, :test do
+  gem 'codewars_test', git: 'https://github.com/codewars/ruby-test-framework.git'
+  gem 'rspec-core'
+end

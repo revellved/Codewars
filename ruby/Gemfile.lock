@@ -1,0 +1,32 @@
+GIT
+  remote: https://github.com/codewars/ruby-test-framework.git
+  revision: 7092216514714f90a03020a8ae8ccf765610eb37
+  specs:
+    codewars_test (0.0.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rspec-core (3.13.0)
+      rspec-support (~> 3.13.0)
+    rspec-support (3.13.1)
+    sorbet (0.5.11435)
+      sorbet-static (= 0.5.11435)
+    sorbet-runtime (0.5.11435)
+    sorbet-static (0.5.11435-aarch64-linux)
+    sorbet-static (0.5.11435-universal-darwin)
+    sorbet-static (0.5.11435-x86_64-linux)
+
+PLATFORMS
+  aarch64-linux
+  universal-darwin
+  x86_64-linux
+
+DEPENDENCIES
+  codewars_test!
+  rspec-core
+  sorbet
+  sorbet-runtime
+
+BUNDLED WITH
+   2.5.11
