@@ -5,7 +5,7 @@ module RomanNumeralsEncoder
   extend T::Sig
 
   sig { returns(T::Hash[String, Integer]) }
-  def roman_dict
+  def numerals
     {
       'M' => 1000, 'CM' => 900, 'D' => 500, 'CD' => 400, 'C' => 100,
       'XC' => 90, 'L' => 50, 'XL' => 40, 'X' => 10,
@@ -15,11 +15,8 @@ module RomanNumeralsEncoder
 
   sig { params(number: Integer).returns(String) }
   def solution(number)
-    roman = ''
-    roman_dict.map do |rom, num|
-      roman += rom * (number / num)
-      number %= num
-    end
-    roman
+    return '' if number <= 0
+
+    numerals.each { |key, val| return key + solution(number - val) if number >= val }
   end
 end
