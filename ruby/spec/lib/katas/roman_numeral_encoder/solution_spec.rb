@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe 'Roman Numerals Encoder' do
   it 'Fixed tests' do
     extend RomanNumeralsEncoder
