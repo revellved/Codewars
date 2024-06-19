@@ -4,25 +4,13 @@
 module RomanNumeralsDecoder
   extend T::Sig
 
-  def dict
-    {
-      'I' => 1,
-      'V' => 5,
-      'X' => 10,
-      'L' => 50,
-      'C' => 100,
-      'D' => 500,
-      'M' => 1_000
-    }
+  sig { returns(T::Hash[String, Integer]) }
+  def roman_dict
+    { 'M' => 1000, 'D' => 500, 'C' => 100, 'L' => 50, 'X' => 10, 'V' => 5, 'I' => 1 }
   end
 
   sig { params(roman: String).returns(Integer) }
   def solution(roman)
-    last = 0
-    roman.chars.reverse.reduce(0) do |acc, roman_num|
-      acc += dict[roman_num] < last ? -dict[roman_num] : dict[roman_num]
-      last = dict[roman_num]
-      acc
-    end
+    roman.chars.map { |c| roman_dict[c] }.reduce { |a, b| a < b ? b - a : a + b }
   end
 end
