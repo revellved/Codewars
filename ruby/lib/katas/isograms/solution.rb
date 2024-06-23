@@ -6,10 +6,6 @@ module Isograms
 
   sig { params(string: String).returns(T::Boolean) }
   def is_isogram(string)
-    string.chars.map(&:downcase).sort.reduce('') do |last, char| 
-      return false if last == char
-      char
-    end
-    return true
+    string.downcase.chars.uniq == string.downcase.chars
   end
 end
