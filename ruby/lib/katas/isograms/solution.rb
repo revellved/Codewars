@@ -6,6 +6,6 @@ module Isograms
 
   sig { params(string: String).returns(T::Boolean) }
   def is_isogram(string)
-    string.downcase.chars.uniq == string.downcase.chars
+    !string.downcase.chars.uniq!
   end
 end
