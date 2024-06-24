@@ -1,6 +1,10 @@
+# Codewars (Python)
+
+<img src="https://www.python.org/static/community_logos/python-logo.png" alt="python" align="center"/>
+
 ## STARTED
 
-You don't need much to get started
+You don't need much to get started.
 
 ### Must have
 
@@ -13,7 +17,9 @@ You don't need much to get started
 - Make
 
 
-### Commands
+## Commands
+
+> NOTE: If there are several commands in an item, then these are not steps, but options.
 
 - (RECOMENDATION) before starting to use virtualenv 
   - virtualenv .
