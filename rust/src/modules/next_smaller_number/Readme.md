@@ -1,4 +1,4 @@
-# Next smaller number with the same digits
+# Next smaller number with the same digits (Rust)
 
 > https://www.codewars.com/kata/5659c6d896bc135c4c00021e/rust
 

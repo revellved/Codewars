@@ -1,4 +1,4 @@
-# Replace With Alphabet Position
+# Replace With Alphabet Position (Rust)
 
 > https://www.codewars.com/kata/546f922b54af40e1e90001da
 

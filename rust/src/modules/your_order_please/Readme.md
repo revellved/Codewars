@@ -1,4 +1,4 @@
-# Your order, please
+# Your order, please (Rust)
 
 > https://www.codewars.com/kata/55c45be3b2079eccff00010f
 

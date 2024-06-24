@@ -1,4 +1,4 @@
-# Decode the Morse code
+# Decode the Morse code (Rust)
 
 > https://www.codewars.com/kata/54b724efac3d5402db00065e
 

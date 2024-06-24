@@ -1,4 +1,4 @@
-# Sum of Digits / Digital Root
+# Sum of Digits / Digital Root (Rust)
 
 > https://www.codewars.com/kata/541c8630095125aba6000c00
 
