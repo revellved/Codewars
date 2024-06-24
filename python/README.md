@@ -1,6 +1,6 @@
-# Codewars (Python)
+## STARTED
 
-## Started
+> You don't need much to get started
 
 ### Must have
 
@@ -10,15 +10,21 @@
 ### Optional
 
 - Virtualenv (https://virtualenv.pypa.io/en/latest/installation.html)
+- Make ()
 
 
-## Commands
+### Commands
 
-> Recommendation to use virtualenv: ```virtualenv .```
+- (RECOMENDATION) before starting to use virtualenv 
+  ```virtualenv .```
 
-- Install packages (pip) ```make i ```
-- Run all tests ```python main.py```
+- Install packages (pip) 
+  ```pip install -r requirements.txt``` 
+  > or: ```make i ```
 
-## Packages used
+- Run all tests 
+  ```python main.py```
+
+## PACKAGES
 
 - Codewars Test Framework for Python (https://github.com/codewars/python-test-framework)
