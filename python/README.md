@@ -1,6 +1,8 @@
 # Codewars (Python)
 
-<img src="https://www.python.org/static/community_logos/python-logo-inkscape.svg" alt="python" text-align="center"/>
+<p align="center">
+  <img src="https://www.python.org/static/community_logos/python-logo-inkscape.svg" alt="python"/>
+</p>
 
 ## STARTED
 
