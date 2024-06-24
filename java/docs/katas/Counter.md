@@ -1,4 +1,4 @@
-# Counter: Pythonize your Java!! (VERBOSE)
+# Counter: Pythonize your Java!! (Java)
 
 > https://www.codewars.com/kata/5a3832c18882f32aca0000d2/Java
 
