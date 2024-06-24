@@ -1,4 +1,4 @@
-# List Filtering
+# List Filtering (Python)
 
 > https://www.codewars.com/kata/53dbd5315a3c69eed20002dd/python
 

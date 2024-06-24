@@ -1,4 +1,4 @@
-# Go: Stone Scoring
+# Go: Stone Scoring (Python)
 
 > https://www.codewars.com/kata/5fdb2ef8656423001c00e648
 
