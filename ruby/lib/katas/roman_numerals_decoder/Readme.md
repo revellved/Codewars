@@ -1,4 +1,4 @@
-# Roman Numerals Decoder
+# Roman Numerals Decoder (Ruby)
 
 > https://www.codewars.com/kata/51b6249c4612257ac0000005/solutions/ruby
 

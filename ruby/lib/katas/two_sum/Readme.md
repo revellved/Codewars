@@ -1,4 +1,4 @@
-# Two Sum
+# Two Sum (Ruby)
 
 > https://www.codewars.com/kata/52c31f8e6605bcc646000082/ruby
 
