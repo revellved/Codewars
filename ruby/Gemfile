@@ -2,14 +2,14 @@
 
 source 'https://rubygems.org'
 
+gem 'drb'
+gem 'sorbet'
 gem 'sorbet-runtime'
-
-group :development do
-  gem 'sorbet'
-end
+gem 'sorbet-static'
 
 group :development, :test do
   gem 'codewars_test', git: 'https://github.com/codewars/ruby-test-framework.git'
   gem 'rspec-core'
   gem 'rspec-expectations'
+  gem 'tapioca', require: false
 end
