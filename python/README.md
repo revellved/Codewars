@@ -1,3 +1,4 @@
+```
 ## STARTED
 
 > You don't need much to get started
@@ -16,15 +17,17 @@
 ### Commands
 
 - (RECOMENDATION) before starting to use virtualenv 
-  - ```virtualenv .```
+  - virtualenv .
 
 - Install packages (pip) 
-  - ```pip install -r requirements.txt``` 
-  - ```make i ```
+  - pip install -r requirements.txt
+  - make i
 
 - Run all tests 
-  - ```python main.py```
+  - python main.py
 
 ## PACKAGES
 
 - Codewars Test Framework for Python (https://github.com/codewars/python-test-framework)
+
+```
