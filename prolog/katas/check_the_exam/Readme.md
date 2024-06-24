@@ -1,4 +1,4 @@
-# Check the exam
+# Check the exam (Prolog)
 
 > https://www.codewars.com/kata/5a3dd29055519e23ec000074
 
