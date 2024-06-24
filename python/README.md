@@ -1,7 +1,6 @@
-```
 ## STARTED
 
-> You don't need much to get started
+You don't need much to get started
 
 ### Must have
 
@@ -29,5 +28,3 @@
 ## PACKAGES
 
 - Codewars Test Framework for Python (https://github.com/codewars/python-test-framework)
-
-```
