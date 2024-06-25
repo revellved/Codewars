@@ -10,5 +10,5 @@ add_files = `git status --short | grep "^A" | cut -f 3 -d " " | tr '\n' ' '`
 
 commit:
 	git add .
-	git commit -m "(${thisdir_caps}) [U] { ${mod_files}} [R] { ${rnm_files}} | [A] { ${add_files}} | [D] { ${del_files}}"
+	git commit -m "(${thisdir_caps}) 🍩 [U] { ${mod_files}} 🍩 [R] { ${rnm_files}} 🍩 [A] { ${add_files}} 🍩 [D] { ${del_files}}"
 	git push --quiet &
