@@ -8,5 +8,5 @@ files_added = `git status --short | grep A | cut -f 3 -d " " | tr '\n' ' '`
 
 commit:
 	git add .
-	git commit -m "(${current_dir_upper})\n Changed files: [ ${files_changed}].\n Added files: [ ${files_added}].\n Deleted files: [ ${files_deleted}]"
-	git push
+	git commit -m "(${current_dir_upper}) Updated [ ${files_changed}] | Added [ ${files_added}] Deleted [ ${files_deleted}]"
+	git push &
