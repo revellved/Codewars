@@ -1,5 +1,6 @@
-give me code on TypeScript for Tribonacci Sequence
+# Tribonacci Sequence (TypeScript)
 
+> https://www.codewars.com/kata/556deca17c58da83c00002db/javascript
 
 ## Description:
 
