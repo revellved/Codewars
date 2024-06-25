@@ -1,3 +1,5 @@
+## With this script I fucked DRY in all the cracks
+
 thisdir = $(notdir $(shell pwd))
 thisdir_caps = $(shell echo $(thisdir) | tr a-z A-Z)
 
