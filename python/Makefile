@@ -1,3 +1,5 @@
+include ../Makefile
+
 update_packages:
 	pip freeze > requirements.txt
 
