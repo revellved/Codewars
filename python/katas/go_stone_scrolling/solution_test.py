@@ -1,11 +1,11 @@
 import codewars_test as test
-import katas.go_stone_scrolling.solution as solution
+from . solution import determine_winner
 
 @test.describe("6x6 Boards")
 def test_group():
     @test.it("6x6 Board 1")
-    def test_case():
-        test.assert_equals(solution.determine_winner(
+    def _():
+        test.assert_equals(determine_winner(
             [["W","W","W","B","B","B"], 
              ["W","W","W","W","B","B"], 
              ["W","W","W","B","B","B"], 

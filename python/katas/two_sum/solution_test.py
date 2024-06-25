@@ -1,5 +1,5 @@
 import codewars_test as test
-from katas.two_sum.solution import two_sum
+from . solution import two_sum
 
 sample_test_cases = [
     #   numbers       target   valid results
