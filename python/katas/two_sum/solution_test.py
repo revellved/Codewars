@@ -8,7 +8,7 @@ sample_test_cases = [
     ([2, 2, 3],            4,  ((0,1), (1,0))),
 ]
 
-@test.describe('Sample tests')
+@test.describe('Two Sum')
 def sample_tests():
     for numbers, target, valid_results in sample_test_cases:
         @test.it(f'two_sums({numbers}, {target})')
