@@ -1,17 +1,8 @@
 import { boundingBox } from "./katas/basic_bounding_box/solution.js";
+import { duplicateEncode } from "./katas/dup_encoder/solution.js"; 
 
-export class Main {
-  static call() {
-    let data = [
-      [0,0,0,0,0],
-      [0,0,1,0,0],
-      [0,0,0,1,0],
-      [0,0,1,0,0],
-      [0,0,0,0,0]
-    ];
-    let res = boundingBox(data);
-    console.log(`(boundingBox) Data: ${data}. Res: ${res}`);
-  }
-}
-
-Main.call()
+(function main() {
+  duplicateEncode;
+  boundingBox;
+  console.log("WORKED!")
+})()

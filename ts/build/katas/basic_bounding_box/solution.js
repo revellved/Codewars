@@ -1,7 +1,9 @@
 // Return an array with the same shape as the input
 export function boundingBox(imageArray) {
     const rows = imageArray.length;
-    const cols = imageArray[0].length;
+    const cols = imageArray[0]?.length || 0;
+    if (rows === 0 || cols == 0)
+        return [];
     let top = rows;
     let bottom = 0;
     let left = cols;
