@@ -1,6 +1,5 @@
 from typing import List
 
-
 def determine_winner(board: List[List[str]]) -> tuple[str, int]:
     black_count: int = sum(row.count("B") for row in board)
     white_count: int = sum(row.count("W") for row in board)
