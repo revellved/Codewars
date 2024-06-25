@@ -1,5 +1,5 @@
 thisdir = $(notdir $(shell pwd))
-thisdir_caps = `echo $(thisdir) | tr a-z A-Z`
+thisdir_caps = $(echo $(thisdir) | tr a-z A-Z)
 
 mod_files = `git status --short | grep -e "^M" -e "^ M" | cut -f 3 -d " " | tr '\n' ' '`
 rnm_files = `git status --short | grep -e "^R" -e "^ R" | cut -f 3 -d " " | tr '\n' ' '`
