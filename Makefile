@@ -1,5 +1,5 @@
 thisdir = $(notdir $(shell pwd))
-thisdir_caps = `echo $(thisdir) | tr a-z A-Z`
+thisdir_caps = $(shell echo $(thisdir) | tr a-z A-Z)
 
 mod_files = `git status --short | grep -e "^M" -e "^ M" | cut -f 3 -d " " | tr '\n' ' '`
 rnm_files = `git status --short | grep -e "^R" -e "^ R" | cut -f 3 -d " " | tr '\n' ' '`
@@ -11,7 +11,7 @@ rename = $(shell [[ -n $(rnm_files) ]] && echo "🍩 Rename $(mod_files)")
 adding = $(shell [[ -n $(add_files) ]] && echo "🍩 Adding $(add_files)")
 delete = $(shell [[ -n $(del_files) ]] && echo "🍩 Delete $(del_files)")
 
-commit_txt = "($(shell echo $(thisdir_caps))) $(update) $(rename) $(adding) $(delete)"
+commit_txt = "$(thisdir_caps) $(update) $(rename) $(adding) $(delete)"
 
 commit:
 	git add .
