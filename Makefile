@@ -6,7 +6,7 @@ thisdir_caps = $(shell echo $(thisdir) | tr a-z A-Z)
 mod_files = `git status --short | grep -e "^M" -e "^ M" | cut -f 3 -d " " | tr '\n' ' '`
 rnm_files = `git status --short | grep -e "^R" -e "^ R" | cut -f 3 -d " " | tr '\n' ' '`
 add_files = `git status --short | grep -e "^A" -e "^ A" | cut -f 3 -d " " | tr '\n' ' '`
-new_files = `git status --short | grep -e "^??" -e "^ ??" | cut -f 3 -d " " | tr '\n' ' '`
+new_files = `git status --short | grep -e "^??" -e "^ ??" | cut -f 2 -d " " | tr '\n' ' '`
 del_files = `git status --short | grep -e "^D" -e "^ D" | cut -f 3 -d " " | tr '\n' ' '`
 
 update = $(shell [[ -n $(mod_files) ]] && echo "🍩 Update $(mod_files)")
