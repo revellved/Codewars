@@ -1,7 +1,7 @@
 mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
 current_dir := $(notdir $(patsubst %/,%,$(dir $(mkfile_path))))
 current_dir_upper = `echo $(current_dir) | tr a-z A-Z`
-# files = `git status --short | grep D | cut -f 3 -d " "`
+
 changed_files = `git status --short | grep "^M" | cut -f 3 -d " " | tr '\n' ' '`
 renamed_files = `git status --short | grep "^R" | cut -f 3 -d " " | tr '\n' ' '`
 deleted_files = `git status --short | grep "^D" | cut -f 3 -d " " | tr '\n' ' '`
