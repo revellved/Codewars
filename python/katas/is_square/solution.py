@@ -1,5 +1,4 @@
-def is_square(num: int):
-    if num < 0:
-        return False
-    sqrt_num = int(num ** 0.5)
-    return sqrt_num * sqrt_num == num
+import math
+
+def is_square(n: int):
+    return n > -1 and math.sqrt(n) % 1 == 0;
