@@ -11,7 +11,7 @@ rename = $(shell [[ -n $(rnm_files) ]] && echo "🍩 Rename $(mod_files)")
 adding = $(shell [[ -n $(add_files) ]] && echo "🍩 Adding $(add_files)")
 delete = $(shell [[ -n $(del_files) ]] && echo "🍩 Delete $(del_files)")
 
-commit_txt = "$(thisdir_caps) $(update) $(rename) $(adding) $(delete)"
+commit_txt = "($(thisdir_caps)) $(update) $(rename) $(adding) $(delete)"
 
 commit:
 	git add .
