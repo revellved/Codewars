@@ -1,5 +1,5 @@
 import codewars_test as test
-import katas.go_stone_scolling.solution as solution
+import katas.go_stone_scrolling.solution as solution
 
 @test.describe("6x6 Boards")
 def test_group():
