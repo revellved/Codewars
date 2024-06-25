@@ -1,4 +1,4 @@
-import { tribonacci } from './solution';
+import { tribonacci } from './solution.ts';
 import * as chai from 'chai';
 import 'mocha'
 

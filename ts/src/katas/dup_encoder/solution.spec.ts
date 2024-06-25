@@ -1,4 +1,4 @@
-import { duplicateEncode } from './solution.js'
+import { duplicateEncode } from './solution.ts'
 import * as chai from 'chai';
 import 'mocha'
 
