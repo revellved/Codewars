@@ -10,4 +10,4 @@ new_add_files = `git status --short | grep "^A" | cut -f 3 -d " " | tr '\n' ' '`
 commit:
 	git add .
 	git commit -m "(${current_dir_upper}) Updated ${changed_files} | Renamed ${renamed_files} | Added ${new_add_files} | Deleted ${deleted_files}"
-	git push --quiet
+	git push --quiet &
