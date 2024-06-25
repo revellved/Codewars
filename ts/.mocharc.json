@@ -1,0 +1,16 @@
+{
+  "diff": true,
+  "opts": false,
+  "slow": 75,
+  "timeout": 2000,
+  "reporter": "spec",
+  "loader": "ts-node/esm",
+  "package": "./package.json",
+  "extension": ["ts"],
+  "require": [
+    "ts-node/register", 
+    "chai/register-expect.js"
+  ],
+  "watch-files": ["src/**/*spec.ts"],
+  "spec": ["src/**/*.spec.ts"]
+}
