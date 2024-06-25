@@ -1,0 +1,17 @@
+{
+  "name": "ts",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
+  },
+  "keywords": [],
+  "author": "RUSLAN D. REVELLD (revellved.github.io)",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.5.2"
+  }
+}
