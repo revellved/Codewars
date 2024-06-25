@@ -1,1 +1,1 @@
-codewars_test @ git+https://github.com/codewars/python-test-framework.git@3e2ceebd6e6eda7b5058792d1d23a48be8eefa6a
+codewars_test @ git+https://github.com/revellved/python-test-framework.git@fcf7548f9b94a5881bed5a5c080af9c913c06ae3
