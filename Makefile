@@ -12,7 +12,7 @@ del_files = `git status --short | grep -e "^D" -e "^ D" | cut -f 3 -d " " | tr '
 update = $(shell [[ -n $(mod_files) ]] && echo "🍩 Update $(mod_files)")
 rename = $(shell [[ -n $(rnm_files) ]] && echo "🍩 Rename $(mod_files)")
 adding = $(shell [[ -n $(add_files) ]] && echo "🍩 Adding $(add_files)")
-adding = $(shell [[ -n $(new_files) ]] && echo "🍩 Newest $(add_files)")
+adding = $(shell [[ -n $(new_files) ]] && echo "🍩 Newest $(new_files)")
 delete = $(shell [[ -n $(del_files) ]] && echo "🍩 Delete $(del_files)")
 
 commit_txt = "($(thisdir_caps)) $(update) $(rename) $(adding) $(delete)"
