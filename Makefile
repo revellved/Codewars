@@ -1,5 +1,3 @@
-# mk_path = $(abspath $(lastword $(MAKEFILE_LIST)))
-# thisdir = $(notdir $(patsubst %/,%,$(dir $(mk_path))))
 thisdir = $(notdir $(shell pwd))
 thisdir_caps = `echo $(thisdir) | tr a-z A-Z`
 
@@ -13,8 +11,5 @@ commit:
 	git commit -m "(🍩 ${thisdir_caps}) Update ${mod_files} | Rename ${rnm_files} | Added ${add_files} | Delete { ${del_files}}"
 	git push --quiet &
 
-check: 
-	run = $(shell ${mod_files})
-ifeq (run,)
-	@echo "HELLo"
-endif
+check:
+	@echo $(shell $(mod_files) | wc)
