@@ -1,4 +1,4 @@
-import { narcissistic } from './solution';
+import { narcissistic } from './solution.ts';
 import * as chai from 'chai';
 import 'mocha'
 
