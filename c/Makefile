@@ -1,3 +1,4 @@
+include ../Makefile
 
 build:
 	clang ./src/main.c -o ./bin/main
