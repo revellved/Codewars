@@ -6,6 +6,7 @@ pub mod count_chars;
 pub mod count_duplicates;
 pub mod decode_morse;
 pub mod digital_root;
+pub mod grasshopper;
 pub mod multiples_of_3_or_5;
 pub mod next_smaller_number;
 pub mod num_get_index;
