@@ -1,7 +1,11 @@
-const { assert } = require('chai');
+import { queueTime } from './solution.ts'
+import * as chai from 'chai';
+import 'mocha'
+
+const assert = chai.assert;
+chai.config.truncateThreshold=0;
 
 describe("Sample tests", function() {
-  
   it("Simple tests", () => {
     assert.strictEqual(queueTime([], 1), 0);
     assert.strictEqual(queueTime([1,2,3,4], 1), 10);

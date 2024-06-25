@@ -1,10 +1,9 @@
-function queueTime(customers, n) {
-    let tills = Array(n).fill(0);
-    for (let time of customers) {
-        let nextTill = tills.indexOf(Math.min(...tills));
-        tills[nextTill] += time;
+export function queueTime(customers, n) {
+    var w = new Array(n).fill(0);
+    for (let t of customers) {
+        let idx = w.indexOf(Math.min(...w));
+        w[idx] += t;
     }
-    return Math.max(...tills);
+    return Math.max(...w);
 }
-export {};
 //# sourceMappingURL=solution.js.map
