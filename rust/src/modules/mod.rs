@@ -5,6 +5,7 @@ pub mod check_the_exam;
 pub mod count_chars;
 pub mod count_duplicates;
 pub mod decode_morse;
+pub mod decreasing_number;
 pub mod digital_root;
 pub mod grasshopper;
 pub mod multiples_of_3_or_5;
