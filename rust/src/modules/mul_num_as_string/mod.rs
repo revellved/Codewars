@@ -1,32 +1,23 @@
 pub fn multiply(a: &str, b: &str) -> String {
-    let num1: Vec<u32> = a.chars().map(|c| c.to_digit(10).unwrap()).collect();
-    let num2: Vec<u32> = b.chars().map(|c| c.to_digit(10).unwrap()).collect();
+    if a.chars().all(|c| c == '0') || b.chars().all(|c| c == '0') {
+        return String::from('0');
+    }
 
-    let mut result = vec![0; num1.len() + num2.len()];
+    let mut res = vec![0; a.len() + b.len()];
 
-    for i in (0..num1.len()).rev() {
-        for j in (0..num2.len()).rev() {
-            let mul = num1[i] * num2[j];
-            let sum = mul + result[i + j + 1];
-            result[i + j] += sum / 10;
-            result[i + j + 1] = sum % 10;
+    for (i, c1) in a.chars().rev().enumerate() {
+        for (j, c2) in b.chars().rev().enumerate() {
+            let n = (c1 as u8 - 48) * (c2 as u8 - 48) + res[i + j];
+            res[i + j] = n % 10;
+            res[i + j + 1] += n / 10;
         }
     }
 
-    while let Some(&0) = result.first() {
-        result.remove(0);
-    }
-
-    let res = result
-        .iter()
-        .map(|&d| char::from_digit(d, 10).unwrap())
-        .collect();
-
-    if res == "" {
-        "0".to_string()
-    } else {
-        res
-    }
+    res.iter()
+        .rev()
+        .skip_while(|&&i| i == 0)
+        .map(|i| (i + 48) as char)
+        .collect()
 }
 
 #[cfg(test)]
