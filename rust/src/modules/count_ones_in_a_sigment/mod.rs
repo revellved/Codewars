@@ -1,6 +1,10 @@
 pub fn count_ones(left: u64, right: u64) -> u64 {
-    (left..=right).fold(0, |count, i| {
-        count + (format!("{:#064b}", i).replace("0", "").len() - 1)
+    (left..=right).fold(0, |mut count, mut i| {
+        while i > 0 {
+            count += i % 2;
+            i /= 2;
+        }
+        count
     }) as u64
 }
 
