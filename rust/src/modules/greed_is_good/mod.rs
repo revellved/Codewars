@@ -1,36 +1,16 @@
-pub fn score(dice: [u8; 5]) -> u32 {
-    let mut score = 0;
-    let mut counts = [0; 6];
-
-    for &die in dice.iter() {
-        counts[(die - 1) as usize] += 1;
+fn score(dice: [u8; 5]) -> u32 {
+    let mut numbers = [0u32; 6];
+    for n in dice {
+        numbers[(n - 1) as usize] += 1;
     }
-
-    for (i, &count) in counts.iter().enumerate() {
-        match i {
-            0 => {
-                if count >= 3 {
-                    score += 1000 + (count - 3) * 100;
-                } else {
-                    score += count * 100;
-                }
-            }
-            4 => {
-                if count >= 3 {
-                    score += 500 + (count - 3) * 50;
-                } else {
-                    score += count * 50;
-                }
-            }
-            _ => {
-                if count >= 3 {
-                    score += (i as u32 + 1) * 100;
-                }
-            }
-        }
-    }
-
-    score
+    numbers[0] / 3 * 1000 
+    + numbers[0] % 3 * 100
+    + numbers[1] / 3 * 200
+    + numbers[2] / 3 * 300
+    + numbers[3] / 3 * 400
+    + numbers[4] / 3 * 500
+    + numbers[4] % 3 * 50
+    + numbers[5] / 3 * 600
 }
 
 #[cfg(test)]
