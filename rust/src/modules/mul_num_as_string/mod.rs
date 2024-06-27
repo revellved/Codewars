@@ -1,5 +1,5 @@
 pub fn multiply(a: &str, b: &str) -> String {
-    if a.chars().all('0') || b.chars().all('0') {
+    if a.chars().all(|c| c == '0') || b.chars().all(|c| c == '0') {
         return String::from('0');
     }
 
