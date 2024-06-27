@@ -4,6 +4,7 @@ pub mod cakes;
 pub mod check_the_exam;
 pub mod count_chars;
 pub mod count_duplicates;
+pub mod count_ones_in_a_sigment;
 pub mod decode_morse;
 pub mod decreasing_number;
 pub mod digital_root;
