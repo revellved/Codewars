@@ -1,4 +1,5 @@
 #include "solution.c"
+
 #include <criterion/criterion.h>
 #include <stdio.h>
 
