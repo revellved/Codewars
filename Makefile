@@ -1,5 +1,11 @@
 ## With this script I fucked DRY in all the holes
 
+ifeq ($(OS),Windows_NT)
+	SHELL := C:\\Windows\System32\cmd.exe
+else
+	SHELL := /bin/bash
+endif
+
 thisdir = $(notdir $(shell pwd))
 thisdir_caps = $(shell echo $(thisdir) | tr a-z A-Z)
 
