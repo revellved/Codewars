@@ -1,18 +1,24 @@
 #include <stddef.h>
 
-#include <stddef.h>
+size_t sequence_length(size_t n, const int numbers[], int elem) {
+    size_t count = 0;
+    int startIndex = -1;
+    int endIndex = -1;
 
-size_t sequence_length (size_t n, const int numbers[n], int elem)
-{
-  int reps = 0;
-  size_t size = 0;
-  for (size_t i = 0; i < n; ++i) {
-    if (numbers[i] == elem)
-      ++reps;
-    if (reps > 0)
-      ++size;
-    if (reps > 1 && numbers[i] != elem)
-      --size;
-  }
-  return reps == 2 ? size: 0;
+    for (size_t i = 0; i < n; i++) {
+        if (numbers[i] == elem) {
+            if (startIndex == -1) {
+                startIndex = i;
+            } else {
+                endIndex = i;
+            }
+            count++;
+        }
+    }
+
+    if (count != 2) {
+        return 0;
+    }
+
+    return endIndex - startIndex + 1;
 }
