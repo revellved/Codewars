@@ -2,8 +2,7 @@
 #include <ctype.h>
 #include <string.h>
 
-char *camel_case(const char *s)
-{
+char *camel_case(const char *s) {
     int n = strlen(s) + 1, j = 0;
     char *new = malloc(n * sizeof(char));
     
