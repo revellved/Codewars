@@ -6,6 +6,6 @@ module MoveZeros
 
   sig { params(arr: T::Array[Integer]).returns(T::Array[Integer]) }
   def moveZeros(arr) 
-    arr.reduce([[],[]]) {|acc, el| (el != 0) ? acc[0].push(el) : acc[1].push(el); acc }.flatten
+    arr.sort_by { |w| w.zero? ? 1 : 0 }
   end
 end
