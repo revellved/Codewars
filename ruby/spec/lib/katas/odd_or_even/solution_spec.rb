@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 describe 'Solution' do
-  it 'Fixed tests' do
-    extend OddOrEven
+  include OddOrEven
 
+  it 'Fixed tests' do
     Test.assert_equals(odd_or_even([0]), 'even')
     Test.assert_equals(odd_or_even([1]), 'odd')
     Test.assert_equals(odd_or_even([]), 'even')
