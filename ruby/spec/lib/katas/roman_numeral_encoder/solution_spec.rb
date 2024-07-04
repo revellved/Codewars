@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 describe 'Roman Numerals Encoder' do
-  it 'Fixed tests' do
-    extend RomanNumeralsEncoder
+  include RomanNumeralsEncoder
 
+  it 'Fixed tests' do
     expect(solution(1)).to eq('I'), "solution(1),'I'"
     expect(solution(4)).to eq('IV'), "solution(4),'IV'"
     expect(solution(6)).to eq('VI'), "solution(6),'VI'"
