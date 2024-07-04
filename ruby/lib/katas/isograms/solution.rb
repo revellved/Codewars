@@ -4,7 +4,7 @@
 module Isograms
   # @param string [String]
   # @return [Boolean]
-  def is_isogram(string)
+  def isogram?(string)
     !string.downcase.chars.uniq!
   end
 end
