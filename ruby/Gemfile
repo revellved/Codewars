@@ -7,6 +7,11 @@ gem 'sorbet'
 gem 'sorbet-runtime'
 gem 'sorbet-static'
 
+group :development do
+  gem 'rubocop'
+  gem 'solargraph'
+end
+
 group :development, :test do
   gem 'codewars_test', git: 'https://github.com/codewars/ruby-test-framework.git'
   gem 'rspec-core'
