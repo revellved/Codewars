@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 describe 'prime?' do
-  it 'Should return false for non-prime numbers.' do
-    extend NumberPrime
+  include NumberPrime
 
+  it 'Should return false for non-prime numbers.' do
     Test.assert_equals(prime?(4), false)
     Test.assert_equals(prime?(100), false)
     Test.assert_equals(prime?(999), false)
@@ -12,8 +12,6 @@ describe 'prime?' do
   end
 
   it 'Should return true for prime numbers.' do
-    extend NumberPrime
-
     Test.assert_equals(prime?(2), true)
     Test.assert_equals(prime?(3), true)
     Test.assert_equals(prime?(5), true)
