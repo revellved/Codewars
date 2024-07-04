@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 describe 'Solution' do
-  it 'Fixed tests' do
-    extend ValidBraces
+  include ValidBraces
 
+  it 'Fixed tests' do
     Test.assert_equals(valid_braces('()'), true)
     Test.assert_equals(valid_braces('[(])'), false)
   end
