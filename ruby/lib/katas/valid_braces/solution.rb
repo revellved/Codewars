@@ -2,13 +2,13 @@
 
 # https://www.codewars.com/kata/5277c8a221e209d3f6000b56/ruby
 module ValidBraces
-  extend T::Sig
-
+  # @return [Hash<String, String>]
   def braces_dict
     { '(' => ')', '{' => '}', '[' => ']' }
   end
 
-  sig { params(braces: String).returns(T::Boolean) }
+  # @param braces [String]
+  # @return [Boolean]
   def valid_braces(braces)
     stack = []
 
