@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 describe 'Solution' do
-  it 'Fixed tests' do
-    extend RomanNumeralsDecoder
+  include RomanNumeralsDecoder
 
+  it 'Fixed tests' do
     Test.assert_equals(solution('XXI'), 21)
     Test.assert_equals(solution('I'), 1)
     Test.assert_equals(solution('IV'), 4)
