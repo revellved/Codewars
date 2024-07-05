@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe 'Solution' do
+describe 'Odd Or Even spec solution' do
   include OddOrEven
 
   it 'Fixed tests' do
