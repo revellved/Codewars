@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe 'prime?' do
+describe 'Number Prime spec solution' do
   include NumberPrime
 
   it 'Should return false for non-prime numbers.' do
