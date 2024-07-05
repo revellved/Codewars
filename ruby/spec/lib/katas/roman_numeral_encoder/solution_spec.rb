@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe 'Roman Numerals Encoder' do
+describe 'Roman Numerals Encoder spec solution' do
   include RomanNumeralsEncoder
 
   it 'Fixed tests' do
