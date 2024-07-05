@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe 'Delete occurrences of an element if it occurs more than n times' do
+describe 'Delete Nth spec solution' do
   include DeleteNth
 
   it 'Basic tests' do
