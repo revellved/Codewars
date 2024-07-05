@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe 'Solution' do
+describe 'Descending Order spec solution' do
   include DescendingOrder
 
   it 'Fixed tests' do
