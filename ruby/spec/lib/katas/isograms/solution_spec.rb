@@ -1,4 +1,6 @@
-describe 'Solution' do
+# frozen_string_literal: true
+
+describe 'Isograms spec solution' do
   include Isograms
 
   it 'Fixed tests' do
