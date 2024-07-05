@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe 'Random' do
+describe 'Move Zeros spec solution' do
   include MoveZeros
 
   it 'test' do
