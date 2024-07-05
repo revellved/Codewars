@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # https://www.codewars.com/kata/54d7660d2daf68c619000d95/ruby
-module CommonDeniminators
+module CommonDenominators
   # @param lst [Array<Array<Integer>>]
   # @return [Array<Array<Integer>>]
   def convert_fracts(lst)
