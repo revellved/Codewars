@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe 'weirdcase' do
+describe 'Weirdcase spec solution' do
   include WeirdStringCase
 
   it 'should return the correct value for a single word' do
