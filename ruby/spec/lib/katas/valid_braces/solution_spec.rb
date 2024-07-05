@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe 'Solution' do
+describe 'Valid Braces spec solution' do
   include ValidBraces
 
   it 'Fixed tests' do
