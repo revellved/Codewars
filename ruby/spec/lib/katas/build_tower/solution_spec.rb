@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe 'Basic tests' do
+describe 'Build Tower spec solution' do
   include BuildTower
 
   it 'should pass basic tests' do
