@@ -3,7 +3,7 @@
 describe 'Build Tower spec solution' do
   include BuildTower
 
-  it 'should pass basic tests' do
+  it 'fixed test' do
     Test.assert_equals(tower_builder(1), ['*'])
     Test.assert_equals(tower_builder(2), [' * ', '***'])
     Test.assert_equals(tower_builder(3), ['  *  ', ' *** ', '*****'])
