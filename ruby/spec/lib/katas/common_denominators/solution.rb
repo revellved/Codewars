@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe 'Basic tests' do
+describe 'Common Deniminators spec solution' do
   include CommonDeniminators
 
   it 'should pass basic tests' do
