@@ -17,11 +17,12 @@ You don't need much to get started.
 
 - Virtualenv (https://virtualenv.pypa.io/en/latest/installation.html)
 - Make
-
+- Pyright
 
 ## Commands
 
 > NOTE: If there are several commands in an item, then these are not steps, but options.
+> RECOMENDATION: Install LSP server Pyright for your IDE 
 
 - (RECOMENDATION) before starting to use virtualenv 
   - virtualenv .
