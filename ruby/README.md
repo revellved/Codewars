@@ -15,9 +15,7 @@ You don't need much to get started.
 ## Commands
 
 > NOTE: If there are several commands in an item, then these are not steps, but options.
-
-- (RECOMENDATION) before starting to use virtualenv 
-  - Install LSP server Solagraph for your IDE 
+> RECOMENDATION: Install LSP server Solagraph for your IDE 
 
 - Install packages (bundle) 
   - bundle install
