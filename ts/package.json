@@ -4,10 +4,7 @@
   "license": "UNLICENSED",
   "author": "RUSLAN D. REVELLD (revellved.github.io)",
   "description": "Project with solutions for Codewars TypeScript and JavaScript katas",
-  "keywords": [
-    "codewars",
-    "ts"
-  ],
+  "keywords": ["codewars", "ts"],
   "type": "module",
   "main": "srs/index.ts",
   "scripts": {
