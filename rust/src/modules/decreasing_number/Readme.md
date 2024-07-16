@@ -1,4 +1,8 @@
-Give me Python code for Total increasing or decreasing numbers up to a power of 10 
+# Total increasing or decreasing numbers up to a power of 10 (Rust)
+
+> https://www.codewars.com/kata/54b724efac3d5402db00065e
+
+## Description:
 
 fn total_inc_dec(n: u32) -> u64 
 Let's define increasing numbers as the numbers whose digits, read from left to right, are never less than the previous ones: 234559 is an example of increasing number.
