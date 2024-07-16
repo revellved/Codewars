@@ -13,6 +13,7 @@ pub mod greed_is_good;
 pub mod mul_num_as_string;
 pub mod multiples_of_3_or_5;
 pub mod next_smaller_number;
+pub mod not_very_secure;
 pub mod num_get_index;
 pub mod persistent_bigger;
 pub mod phone_number;
