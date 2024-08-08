@@ -3,7 +3,7 @@ import * as chai from 'chai';
 import 'mocha'
 
 const assert = chai.assert;
-chai.config.truncateThreshold=0;
+chai.config.truncateThreshold = 0;
 
 describe("Basic tests", function() {
   function doTest(input: [number[], number], expected: number[]) {

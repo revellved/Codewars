@@ -7,6 +7,7 @@ You don't need much to get started.
 ### Must have
 
 - Node
+- TypeScript (Global)
 
 ### Optional
 
@@ -29,5 +30,3 @@ You don't need much to get started.
 - @types/mocha
 - chai
 - mocha
-- ts-node
-- typescript

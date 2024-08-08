@@ -6,19 +6,12 @@
   "description": "Project with solutions for Codewars TypeScript and JavaScript katas",
   "keywords": ["codewars", "ts"],
   "type": "module",
-  "main": "srs/index.ts",
-  "scripts": {
-    "build": "tsc -w",
-    "run": "nodemon build/index.js",
-    "test": "TS_NODE_PROJECT='./test.tsconfig.json' mocha"
-  },
+  "scripts": { "test": "mocha" },
   "devDependencies": {
     "@codewars/test-compat": "^1.1.0",
     "@types/chai": "^4.3.16",
     "@types/mocha": "^10.0.7",
     "chai": "^5.1.1",
-    "mocha": "^10.5.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.5.2"
+    "mocha": "^10.5.1"
   }
 }
