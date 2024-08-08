@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": "./src",                                  
+    "outDir": "./build",                                  
+    "target": "esnext",
+    "module": "nodenext",
+    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
+    
+    "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true
+  },
+
+  "include": ["src/**/*.ts"],
+  "exclude": [
+    "./node_modules/",
+    "./build/",
+    "**/*.spec.ts"
+  ]
+}
