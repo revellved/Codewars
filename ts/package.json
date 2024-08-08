@@ -8,9 +8,8 @@
   "type": "module",
   "main": "srs/index.ts",
   "scripts": {
-    "start:build": "tsc -w",
-    "start:run": "nodemon build/index.js",
-    "start": "concurrently npm:start:*",
+    "build": "tsc -w",
+    "run": "nodemon build/index.js",
     "test": "TS_NODE_PROJECT='./test.tsconfig.json' mocha"
   },
   "devDependencies": {
@@ -21,8 +20,5 @@
     "mocha": "^10.5.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.2"
-  },
-  "dependencies": {
-    "concurrently": "^8.2.2"
   }
 }
