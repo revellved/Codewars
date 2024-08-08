@@ -5,7 +5,7 @@ import 'mocha'
 const assert = chai.assert;
 chai.config.truncateThreshold=0;
 
-describe("Basic tests",function(){
+describe("Basic tests", function() {
   function doTest(input: [number[], number], expected: number[]) {
     let [sig, len] = input;
     it(`Testing signature=[${sig}], n=${len}`, () => {
