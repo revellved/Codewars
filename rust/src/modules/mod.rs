@@ -10,6 +10,7 @@ pub mod decreasing_number;
 pub mod digital_root;
 pub mod grasshopper;
 pub mod greed_is_good;
+pub mod make_a_spiral;
 pub mod mul_num_as_string;
 pub mod multiples_of_3_or_5;
 pub mod next_smaller_number;
